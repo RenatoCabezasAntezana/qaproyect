@@ -1,0 +1,30 @@
+{
+  "name": "cypress12-mysql",
+  "version": "1.0.0",
+  "description": "Integración de MySQL a Cypress",
+  "main": "index.js",
+  "scripts": {
+    "test": "cypress open",
+    "test:project1": "cypress run --browser chrome --web 'cypress/e2e/features/*.feature'"
+  },
+  "keywords": [
+    "javascript",
+    "cypress",
+    "mysql",
+    "esbuild"
+  ],
+  "author": "Bryan Corrales",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^15.1.2",
+    "@bahmutov/cypress-esbuild-preprocessor": "^2.1.5",
+    "cypress": "^12.4.1",
+    "esbuild": "^0.16.17",
+    "mysql": "^2.18.1"
+  },
+  "cypress-cucumber-preprocessor": {
+    "stepDefinitions": [
+      "cypress/e2e/step-definitions/*.{js, ts}"
+    ]
+  }
+}
